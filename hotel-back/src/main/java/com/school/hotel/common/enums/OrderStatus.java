@@ -1,0 +1,3 @@
+package com.school.hotel.common.enums;
+
+public enum OrderStatus { PENDING_PAYMENT, PAID, PENDING_CHECKIN, CONFIRMED, CHECKED_IN, COMPLETED, CANCELLED, REFUNDING, REFUNDED }

@@ -1,0 +1,133 @@
+.bo-page {
+  display: grid;
+  gap: 22px;
+}
+.bo-page-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.bo-kicker {
+  margin: 0 0 7px;
+  color: #137c8b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.bo-page-head h1 {
+  margin: 0;
+  color: #102a43;
+  font-size: 26px;
+  letter-spacing: 0;
+}
+.bo-page-head p:last-child {
+  margin: 7px 0 0;
+  color: #829ab1;
+  font-size: 12px;
+}
+.bo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  color: #52606d;
+  background: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.bo-button--primary {
+  border-color: #137c8b;
+  color: #fff;
+  background: #137c8b;
+}
+.bo-button--danger {
+  border-color: #f1b4b2;
+  color: #b83232;
+  background: #fff5f5;
+}
+.bo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.bo-panel {
+  padding: 20px;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  background: #fff;
+}
+.bo-panel h2 {
+  margin: 0 0 16px;
+  color: #243b53;
+  font-size: 17px;
+}
+.bo-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.bo-field {
+  display: grid;
+  gap: 7px;
+  color: #627d98;
+  font-size: 12px;
+}
+.bo-field input,
+.bo-field select,
+.bo-field textarea {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #fff;
+}
+.bo-field textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+.bo-tag {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #137c8b;
+  background: #e9f5f3;
+  font-size: 11px;
+}
+.bo-tag--warning {
+  color: #9b5c16;
+  background: #fff4d6;
+}
+.bo-tag--danger {
+  color: #b83232;
+  background: #fcebea;
+}
+.bo-empty {
+  padding: 48px;
+  color: #829ab1;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .bo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .bo-page-head {
+    align-items: start;
+  }
+  .bo-grid,
+  .bo-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .bo-page-head {
+    display: grid;
+  }
+  .bo-page-head > .bo-button {
+    justify-self: start;
+  }
+}

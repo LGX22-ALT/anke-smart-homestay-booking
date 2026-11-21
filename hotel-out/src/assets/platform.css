@@ -1,0 +1,562 @@
+:root {
+  --font-ui: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --brand: #6246a0;
+  --brand-hover: #513684;
+  --brand-soft: #f1edf8;
+  --ink: #202938;
+  --muted: #526173;
+  --canvas: #f5f6f8;
+  --surface: #fff;
+  --line: #dce1e8;
+  --price: #b84d20;
+  --el-color-primary: var(--brand);
+  --el-color-primary-light-9: var(--brand-soft);
+  --el-font-size-base: 14px;
+  --motion-fast: 160ms;
+}
+html .app-shell .result-foot {
+  flex-wrap: wrap;
+}
+html .app-shell .result-foot b {
+  margin-left: auto;
+  color: var(--price);
+  font-variant-numeric: tabular-nums;
+}
+html .app-shell .result-book {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: var(--brand);
+  color: white;
+  text-decoration: none;
+}
+html .app-shell .result-book:hover {
+  background: var(--brand-hover);
+}
+html .app-shell .center-nav {
+  border-radius: 10px;
+}
+html
+  .app-shell
+  :is(.office-main, .office-content, .bo-page, .bo-page > *, .dashboard-grid > *, .bo-panel) {
+  min-width: 0;
+}
+html .app-shell .metric-card {
+  border-top-width: 1px;
+  border-top-color: var(--line);
+  border-radius: 8px;
+}
+html .app-shell .metric-card small {
+  color: var(--muted);
+}
+html .app-shell .quick-links a {
+  border-left: 0;
+  border-radius: 6px;
+}
+html .app-shell .center-nav a.router-link-active {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+html .app-shell .center-sidebar {
+  border-radius: 10px;
+}
+html .app-shell .center-content {
+  border-radius: 10px;
+}
+html .app-shell .center-content .profile-form {
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+}
+html .app-shell .status-card {
+  box-shadow: none;
+}
+html .app-shell .status-card h1 {
+  font-size: 30px;
+}
+html .app-shell .site-nav-item--active::after {
+  border: 0;
+  bottom: 10px;
+  width: 24px;
+}
+html .app-shell .site-nav-item:hover {
+  color: var(--brand);
+}
+html .app-shell .hero-inner {
+  height: auto;
+}
+html .app-shell .hero-search-card {
+  grid-template-columns: 1fr 2fr 1.4fr 1fr auto;
+  align-items: end;
+}
+html .app-shell .hero-search-card .destination-field {
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+html .app-shell .hero-search-card :is(.hero-dates, .keyword-field, .guests-field, .hero-submit) {
+  grid-column: auto;
+}
+html .app-shell .hero-submit {
+  height: 44px;
+  font-size: 15px;
+  padding: 0 24px;
+}
+html .app-shell .hero-search-card .hero-error {
+  grid-column: 1 / -1;
+}
+@media (max-width: 1000px) {
+  html .app-shell .hero-search-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .app-shell .hero-search-card .hero-dates {
+    grid-column: 1 / -1;
+  }
+  html .app-shell .hero-search-card .hero-submit {
+    grid-column: 1 / -1;
+  }
+}
+html .app-shell {
+  color: var(--ink);
+  font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+html .app-shell :is(h1, h2, h3) {
+  font-family: inherit;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+html .app-shell :is(button, input, select, textarea) {
+  font-family: inherit;
+  accent-color: var(--brand);
+}
+html .app-shell :is(input, select, textarea) {
+  color: var(--ink);
+  caret-color: var(--brand);
+}
+html .app-shell input::placeholder,
+html .app-shell textarea::placeholder {
+  color: #657184;
+}
+html .app-shell :is(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #8e76ba;
+  outline-offset: 3px;
+}
+html .app-shell button {
+  transition:
+    background-color var(--motion-fast),
+    border-color var(--motion-fast),
+    color var(--motion-fast);
+}
+html .app-shell button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+::selection {
+  background: #dfd5ef;
+  color: #202938;
+}
+html
+  .app-shell
+  :is(
+    .home-page,
+    .hotel-page,
+    .detail-page,
+    .center-page,
+    .order-page,
+    .explore-page,
+    .result-page,
+    .office-shell
+  ) {
+  background: var(--canvas);
+}
+html .app-shell .site-header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+}
+html .app-shell .site-nav-item {
+  font-size: 15px;
+  font-weight: 600;
+}
+html .app-shell .site-nav-item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--muted);
+}
+html .app-shell .site-nav-item--active,
+html .app-shell .site-nav-item--active svg {
+  color: var(--brand);
+}
+html .app-shell .site-nav-item--active::after {
+  background: var(--brand);
+  height: 2px;
+  border-radius: 0;
+}
+html .app-shell .brand-mark {
+  transform: none;
+  box-shadow: none;
+  border-radius: 8px;
+  background: var(--brand);
+}
+html .app-shell .brand-mark svg {
+  transform: none;
+}
+html .app-shell .brand-title {
+  font-size: 21px;
+  color: var(--ink);
+}
+html .app-shell .brand-caption {
+  letter-spacing: 0;
+  color: var(--muted);
+}
+html .app-shell :is(.home-main, .detail-main, .explore-main) {
+  max-width: 1200px;
+}
+html .app-shell .home-main {
+  padding-top: 24px;
+}
+html .app-shell .ai-stay {
+  border-radius: 10px;
+  background: #f7f5fb;
+  border-color: #e2dcea;
+  padding: 24px;
+}
+html .app-shell .assistant-intro h1 {
+  font-size: 26px;
+}
+html .app-shell .assistant-intro h1 em {
+  color: inherit;
+  font-style: normal;
+}
+html .app-shell .assistant-label {
+  color: var(--muted);
+  letter-spacing: 0;
+}
+html .app-shell .assistant-composer {
+  box-shadow: none;
+  border-radius: 8px;
+}
+html
+  .app-shell
+  :is(
+    .recommend-section,
+    .explore-card,
+    .guide-grid a,
+    .room-inventory,
+    .content-section,
+    .form-panel,
+    .summary,
+    .recharge-panel
+  ) {
+  border-radius: 10px;
+  box-shadow: none;
+  border-color: var(--line);
+}
+html .app-shell .portal-shortcuts {
+  gap: 0;
+  border-block: 1px solid var(--line);
+  padding: 16px 0;
+}
+html .app-shell .portal-shortcuts a {
+  border: 0;
+  border-radius: 0;
+  padding: 6px 22px;
+  background: transparent;
+}
+html .app-shell .portal-shortcuts a + a {
+  border-left: 1px solid var(--line);
+}
+html
+  .app-shell
+  :is(.card-price, .hotel-card-content strong, .result-price strong, .hotel-price strong) {
+  color: var(--price);
+  font-variant-numeric: tabular-nums;
+}
+html .app-shell :is(.card-detail, .section-heading p, .hotel-location, .hotel-description) {
+  color: var(--muted);
+  font-size: 13px;
+}
+html .app-shell :is(.section-heading h2, .page-heading h1) {
+  color: var(--ink);
+}
+html .app-shell .page-heading h1 {
+  font-size: 30px;
+}
+html .app-shell .page-heading > span,
+html .app-shell :is(.section-eyebrow, .bo-kicker, .kicker, .eyebrow, .footer-kicker) {
+  display: none;
+}
+html .app-shell .hotel-hero {
+  min-height: 0;
+  background: white !important;
+  border-bottom: 1px solid var(--line);
+  padding: 24px;
+}
+html .app-shell .hero-inner {
+  width: min(100%, 1200px);
+  padding: 0;
+  min-height: 0;
+}
+html .app-shell .hero-search-card {
+  position: static;
+  width: 100%;
+  box-shadow: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0;
+}
+html .app-shell .hero-field {
+  color: var(--muted);
+}
+html .app-shell .hero-field :is(input, select) {
+  color: var(--ink);
+  font-size: 14px;
+}
+html .app-shell .hero-submit {
+  background: var(--brand);
+  border-radius: 6px;
+  min-height: 44px;
+}
+html .app-shell .hotel-recommend,
+html .app-shell .search-results-section {
+  width: min(100% - 48px, 1200px);
+  padding-top: 28px;
+}
+html .app-shell .section-title-row h2 {
+  font-size: 23px;
+}
+html .app-shell .hotel-card {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: none;
+  background: white;
+}
+html .app-shell .hotel-card:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #a798c1;
+}
+html .app-shell .hotel-card-content {
+  padding: 14px;
+}
+html .app-shell .hotel-card-content h3 {
+  font-size: 16px;
+}
+html .app-shell .city-tabs button.active {
+  background: var(--brand);
+  color: white;
+}
+html .app-shell .result-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  background: white;
+}
+html .app-shell .result-title h3 {
+  font-size: 19px;
+}
+html .app-shell .result-price a {
+  background: var(--brand);
+  color: white;
+  border-radius: 6px;
+}
+html .app-shell .title-row h1 {
+  font-size: 28px;
+}
+html .app-shell :is(.section-nav, .availability-search, .guest-field select) {
+  border-color: var(--line);
+}
+html .app-shell .section-nav {
+  background: white;
+}
+html .app-shell .room-inventory {
+  padding: 24px;
+}
+html .app-shell .gallery {
+  border-radius: 10px;
+}
+html .app-shell .order-main {
+  padding: 32px 0 64px;
+}
+html .app-shell .order-main h1 {
+  font-size: 28px;
+  font-weight: 650;
+}
+html .app-shell .order-layout {
+  margin-top: 24px;
+}
+html .app-shell .form-panel label:not(.pay-option) {
+  font-size: 14px;
+  color: var(--muted);
+}
+html .app-shell .submit-button,
+html .app-shell .profile-form button {
+  background: var(--brand);
+  border-radius: 6px;
+}
+html .app-shell .center-main {
+  gap: 24px;
+  padding-top: 32px;
+}
+html .app-shell .center-sidebar {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 10px;
+}
+html .app-shell .center-sidebar nav a {
+  min-height: 44px;
+  border-radius: 6px;
+}
+html .app-shell .center-sidebar nav a.router-link-active {
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+html .app-shell .section-title h1 {
+  font-size: 26px;
+  font-weight: 650;
+}
+html .app-shell .section-title > div > p {
+  display: none;
+}
+html .app-shell .order-list article,
+html .app-shell .review-item {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+html .app-shell .order-tabs button {
+  min-height: 44px;
+}
+html .app-shell .order-tabs button.active {
+  color: white;
+  background: var(--brand);
+}
+html .app-shell .profile-form {
+  max-width: 640px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+}
+html .app-shell .explore-filter :is(input, select) {
+  min-height: 44px;
+  border-radius: 6px;
+  border-color: var(--line);
+}
+html .app-shell .explore-card h2 {
+  font-size: 19px;
+}
+html .app-shell .explore-card img {
+  object-fit: cover;
+}
+html .app-shell .office-shell {
+  --office-accent: var(--brand) !important;
+}
+html .app-shell .office-sidebar {
+  background: #252438;
+}
+html .app-shell .office-sidebar nav a.router-link-active {
+  background: #ffffff16;
+}
+html .app-shell .office-topbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--line);
+}
+html .app-shell .bo-panel {
+  border-color: var(--line);
+  border-radius: 8px;
+}
+html .app-shell .bo-page-head h1 {
+  font-size: 26px;
+}
+html .app-shell .bo-page-head p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+html .app-shell .bo-button {
+  min-height: 40px;
+  border-radius: 6px;
+}
+html .app-shell .bo-button--primary {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+html .app-shell .result-page h1 {
+  font-size: 30px;
+  font-weight: 650;
+}
+@media (max-width: 768px) {
+  html .app-shell .hero-search-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  html .app-shell .hero-dates,
+  html .app-shell .hero-submit {
+    grid-column: 1 / -1;
+  }
+  html .app-shell .hero-field {
+    min-width: 0;
+  }
+  html .app-shell .hero-field :is(input, select) {
+    min-width: 0;
+    width: 100%;
+  }
+  html .app-shell .hotel-recommend,
+  html .app-shell .search-results-section {
+    width: calc(100% - 32px);
+  }
+  html .app-shell .assistant-intro h1 {
+    font-size: 22px;
+  }
+  html .app-shell .ai-stay {
+    padding: 18px;
+  }
+  html .app-shell .portal-shortcuts a {
+    padding: 12px;
+  }
+  html .app-shell .portal-shortcuts a:nth-child(3) {
+    border-left: 0;
+  }
+  html .app-shell .center-main {
+    grid-template-columns: 1fr;
+  }
+  html .app-shell .center-sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  html .app-shell .center-sidebar nav a {
+    padding: 10px 12px;
+  }
+  html .app-shell .order-layout {
+    grid-template-columns: 1fr;
+  }
+  html .app-shell .summary {
+    position: static;
+  }
+  html .app-shell .payment-options {
+    grid-template-columns: 1fr;
+  }
+  html .app-shell .room-inventory,
+  html .app-shell .form-panel,
+  html .app-shell .summary {
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html .app-shell *,
+  html .app-shell *::before,
+  html .app-shell *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

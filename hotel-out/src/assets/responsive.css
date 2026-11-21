@@ -1,0 +1,225 @@
+/* Same routes and data; adapt composition to the available viewport. */
+.mobile-tabbar {
+  display: none;
+}
+.mobile-menu-signout {
+  display: none;
+}
+@media (max-width: 768px), (hover: none) and (pointer: coarse) and (max-width: 1024px) {
+  html .app-shell .office-topbar .mobile-menu {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+  }
+  .mobile-menu-signout {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    border: 0;
+    border-radius: 6px;
+    color: var(--ink);
+    background: var(--brand-soft);
+    text-align: left;
+    padding: 10px 12px;
+    font: inherit;
+    cursor: pointer;
+  }
+  html {
+    scroll-padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+  html .app-shell:has(.mobile-tabbar) {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+  html .app-shell .site-header .header-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 68px;
+    width: calc(100% - 32px);
+    padding: 8px 0;
+    gap: 12px;
+  }
+  html .app-shell .site-header .brand-area {
+    gap: 10px;
+    min-width: 0;
+  }
+  html .app-shell .site-header .brand {
+    font-size: 17px;
+    white-space: nowrap;
+    gap: 7px;
+  }
+  html .app-shell .site-header .brand-mark {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  html .app-shell .site-header .brand-mark svg {
+    width: 19px;
+  }
+  html .app-shell .site-header .site-nav {
+    display: none;
+  }
+  html .app-shell .site-header .header-actions {
+    margin-left: auto;
+    min-height: 44px;
+    gap: 4px;
+  }
+  html
+    .app-shell
+    .site-header
+    :is(.help-entry, .action-divider, .signout-button, .user-name, .user-menu-arrow) {
+    display: none;
+  }
+  html .app-shell .site-header .user-entry {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+  html .app-shell .site-header .user-avatar,
+  html .app-shell .site-header .account-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  html .app-shell .site-header .city-switch {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  html .app-shell .mobile-tabbar {
+    display: grid;
+    position: fixed;
+    z-index: 40;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 5px 8px calc(5px + env(safe-area-inset-bottom));
+    background: white;
+    border-top: 1px solid var(--line);
+  }
+  .mobile-tabbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 54px;
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  .mobile-tabbar svg {
+    width: 22px;
+    height: 22px;
+  }
+  .mobile-tabbar a[aria-current='page'] {
+    color: var(--brand);
+    font-weight: 600;
+    background: var(--brand-soft);
+  }
+  .mobile-tabbar a:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: -2px;
+  }
+  html .app-shell .home-page .home-main {
+    padding-top: 24px;
+  }
+  html .app-shell .home-page .suggestion-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 3px 2px 8px;
+    gap: 8px;
+  }
+  html .app-shell .home-page .suggestion-list button {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 290px;
+    min-height: 44px;
+    padding: 10px 14px;
+    border-radius: 24px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  html .app-shell :is(input, textarea, select) {
+    font-size: 16px;
+  }
+  html .app-shell :is(.hero-field input, .hero-field select, .identity-fields input) {
+    min-height: 44px;
+  }
+  html .app-shell .search-results-section {
+    padding-top: 24px;
+  }
+  html .app-shell .result-card {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 0;
+  }
+  html .app-shell .result-image {
+    height: 100%;
+    min-height: 175px;
+    aspect-ratio: auto;
+  }
+  html .app-shell .result-body {
+    min-width: 0;
+    padding: 12px;
+  }
+  html .app-shell .result-title h3 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  html .app-shell .result-body > p {
+    margin: 8px 0;
+    font-size: 12px;
+  }
+  html .app-shell .result-foot {
+    gap: 8px;
+    align-items: center;
+  }
+  html .app-shell .result-foot > b {
+    font-size: 20px;
+  }
+  html .app-shell .result-foot :is(button, a) {
+    min-height: 44px;
+  }
+  html .app-shell .section-heading h2 {
+    font-size: 24px;
+  }
+  html .app-shell .office-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    min-height: 64px;
+    background: white;
+    gap: 10px;
+  }
+  html .app-shell .office-topbar > div:not(.operator) > span {
+    display: none;
+  }
+  html .app-shell .office-content {
+    padding: 16px 12px;
+  }
+  html .app-shell .bo-page-head {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  html .app-shell .bo-page-head h1 {
+    font-size: 23px;
+  }
+  html .app-shell .bo-button {
+    min-height: 44px;
+  }
+  html .app-shell .office-sidebar {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 360px) {
+  html .app-shell .site-header .header-inner {
+    width: calc(100% - 24px);
+    gap: 6px;
+  }
+  html .app-shell .result-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+}

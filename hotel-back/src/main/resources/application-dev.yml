@@ -1,0 +1,29 @@
+spring:
+  main:
+    # IDEA 日常开发时按需创建 Bean，减少首次启动等待；可通过环境变量临时关闭。
+    lazy-initialization: ${SPRING_LAZY_INITIALIZATION:true}
+  datasource:
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/hotel_booking?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+mybatis-plus:
+  # 项目显式使用 @MapperScan，此开关同时由启动类的扫描器读取。
+  lazy-initialization: ${MYBATIS_LAZY_INITIALIZATION:true}
+hotel:
+  cors:
+    # Vite increments the port when another development server is already running.
+    # Keep these extra loopback origins in dev only; do not allow arbitrary origins.
+    allowed-origins: ${HOTEL_CORS_ORIGINS:http://127.0.0.1:2222,http://localhost:2222,http://127.0.0.1:2223,http://localhost:2223,http://127.0.0.1:5173,http://127.0.0.1:5174,http://127.0.0.1:5175,http://127.0.0.1:5176,http://127.0.0.1:5177,http://127.0.0.1:5178,http://127.0.0.1:5179,http://127.0.0.1:4173,http://localhost:5173,http://localhost:5174,http://localhost:5175,http://localhost:5176,http://localhost:5177,http://localhost:5178,http://localhost:5179,http://localhost:4173}
+  redis:
+    required: false
+logging:
+  level:
+    com.school.hotel: debug

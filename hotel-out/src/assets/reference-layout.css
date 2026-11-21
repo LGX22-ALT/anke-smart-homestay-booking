@@ -1,0 +1,259 @@
+/* Reference-led home composition; shared booking controls and data stay intact. */
+html .app-shell .home-page {
+  background: linear-gradient(180deg, #e7f7ee 100px, #f5fcf8 390px, #fff 700px);
+}
+html .app-shell .home-page .home-main {
+  width: min(100% - 64px, 1400px);
+  max-width: 1400px;
+  padding: 54px 0 64px;
+  margin-inline: auto;
+}
+html .app-shell .home-page .ai-stay {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto 32px;
+  padding: 12px 0 24px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  gap: 28px;
+}
+html .app-shell .home-page .assistant-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+html .app-shell .home-page .assistant-label {
+  display: none;
+}
+html .app-shell .home-page .assistant-intro h1 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 46px);
+  line-height: 1.4;
+  font-weight: 500;
+  color: #15221c;
+}
+html .app-shell .home-page .assistant-intro em {
+  margin-left: 0.6em;
+  font-style: normal;
+  color: inherit;
+}
+html .app-shell .home-page .manual-search {
+  color: #45604f;
+  font-size: 13px;
+}
+html .app-shell .home-page .assistant-workspace {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+html .app-shell .home-page .assistant-composer {
+  padding: 18px 24px;
+  border: 1px solid #91ca9d;
+  border-radius: 24px;
+  box-shadow: none;
+  background: white;
+}
+html .app-shell .home-page .composer-heading {
+  justify-content: flex-end;
+}
+html .app-shell .home-page .composer-heading > span {
+  display: none;
+}
+html .app-shell .home-page .composer-heading small {
+  font-size: 11px;
+  color: #52685a;
+}
+html .app-shell .home-page .assistant-composer textarea {
+  min-height: 74px;
+  margin: 4px 0 14px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+html .app-shell .home-page .assistant-composer textarea::placeholder {
+  color: #586c61;
+}
+html .app-shell .home-page .assistant-composer:focus-within {
+  border-color: #23814a;
+  box-shadow: 0 0 0 3px #cde9d5;
+}
+html .app-shell .home-page .composer-footer {
+  border: 0;
+  padding-top: 0;
+}
+html .app-shell .home-page .composer-footer > span {
+  color: #5d7064;
+  font-size: 12px;
+}
+html .app-shell .home-page .composer-footer > button {
+  background: #268b47;
+  min-height: 44px;
+  padding: 0 25px;
+  border-radius: 24px;
+  font-size: 15px;
+}
+html .app-shell .home-page .composer-footer > button:hover:not(:disabled) {
+  background: #1b7037;
+}
+html .app-shell .home-page .assistant-notice {
+  text-align: center;
+  color: #52685a;
+  font-size: 12px;
+}
+html .app-shell .home-page .suggestion-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+html .app-shell .home-page .suggestion-list > span {
+  display: none;
+}
+html .app-shell .home-page .suggestion-list button {
+  background: white;
+  color: #243d2d;
+  border: 1px solid #e4f1e8;
+  border-radius: 30px;
+  min-height: 48px;
+  padding: 10px 20px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px #1f643207;
+}
+html .app-shell .home-page .suggestion-list button svg {
+  color: #32994e;
+}
+html .app-shell .home-page .assistant-results {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+  text-align: left;
+}
+html .app-shell .home-page .portal-shortcuts {
+  margin: 0 0 42px;
+  border-color: #e5eee8;
+}
+html .app-shell .home-page .recommend-section {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+html .app-shell .home-page .section-heading h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+html .app-shell .home-page .section-heading {
+  margin-bottom: 24px;
+}
+html .app-shell .home-page .recommend-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+html .app-shell .home-page .card-image-wrap {
+  border-radius: 16px;
+  aspect-ratio: 1.52;
+}
+html .app-shell .home-page .card-caption {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+html .app-shell .home-page .card-caption h3 {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+}
+html .app-shell .home-page .card-price {
+  flex-shrink: 0;
+}
+html .app-shell .home-page .attractions-section {
+  margin-top: 52px;
+}
+html .app-shell .home-page .site-nav-item svg {
+  color: #13b569;
+}
+html .app-shell .home-page .site-nav-item--active::after {
+  background: #13b569;
+}
+html .app-shell .detail-page .section-nav {
+  padding: 0 8px;
+  background: white;
+  backdrop-filter: none;
+  box-shadow: 0 8px 26px #27314708;
+}
+html .app-shell .detail-page .section-nav button {
+  flex: 1 0 88px;
+  min-height: 68px;
+  border-bottom: 0;
+  font-size: 16px;
+  color: var(--ink);
+}
+html .app-shell .detail-page .section-nav button.active {
+  color: var(--brand);
+}
+@media (max-width: 1000px) {
+  html .app-shell .home-page .recommend-grid {
+    gap: 24px 16px;
+  }
+  html .app-shell .home-page .card-caption {
+    flex-wrap: wrap;
+  }
+  html .app-shell .home-page .card-caption h3 {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 768px) {
+  html .app-shell .home-page .home-main {
+    width: calc(100% - 32px);
+    padding-top: 28px;
+  }
+  html .app-shell .home-page .ai-stay {
+    gap: 22px;
+    margin-bottom: 12px;
+  }
+  html .app-shell .home-page .assistant-intro h1 {
+    font-size: 27px;
+  }
+  html .app-shell .home-page .assistant-intro em {
+    display: block;
+    margin-left: 0;
+  }
+  html .app-shell .home-page .assistant-composer {
+    border-radius: 18px;
+    padding: 16px;
+  }
+  html .app-shell .home-page .assistant-composer textarea {
+    font-size: 16px;
+    min-height: 105px;
+  }
+  html .app-shell .home-page .suggestion-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  html .app-shell .home-page .suggestion-list button {
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 12px;
+    white-space: normal;
+    text-align: left;
+  }
+  html .app-shell .home-page .recommend-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 14px;
+  }
+  html .app-shell .home-page .section-heading h2 {
+    font-size: 25px;
+  }
+  html .app-shell .home-page .card-caption h3 {
+    font-size: 14px;
+  }
+  html .app-shell .home-page .portal-shortcuts {
+    margin-bottom: 32px;
+  }
+  html .app-shell .detail-page .section-nav button {
+    flex: 0 0 80px;
+    min-height: 60px;
+    font-size: 15px;
+  }
+}

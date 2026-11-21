@@ -1,0 +1,30 @@
+# Local agent, IDE and workspace metadata
+.codex-artifacts/
+.workbuddy/
+.idea/
+**/.idea/
+**/.vscode/
+AGENTS.md
+
+# Dependencies and generated output
+**/node_modules/
+**/target/
+**/dist/
+**/release/
+**/test-results/
+**/playwright-report/
+**/test-artifacts/
+**/scripts/artifacts/
+**/__pycache__/
+*.log
+
+# Runtime data and local configuration
+**/uploads/
+**/.env
+**/.env.*
+!**/.env.example
+hotel-back/data/
+
+# Local-only project notes and personal documents
+项目文档/
+测试文档/

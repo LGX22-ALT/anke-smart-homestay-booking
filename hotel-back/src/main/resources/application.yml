@@ -1,0 +1,46 @@
+server:
+  port: ${SERVER_PORT:8081}
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: hotel-back
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.school.hotel.entity
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+hotel:
+  ai:
+    config-path: ${HOTEL_AI_CONFIG_PATH:./data/ai-settings.json}
+  order:
+    payment-timeout-initial-delay-ms: ${PAYMENT_TIMEOUT_INITIAL_DELAY_MS:60000}
+    payment-timeout-scan-ms: ${PAYMENT_TIMEOUT_SCAN_MS:60000}
+  jwt:
+    secret: ${HOTEL_JWT_SECRET:hotel-booking-dev-secret-change-me-please-32}
+    access-expire-minutes: ${HOTEL_JWT_ACCESS_MINUTES:120}
+    refresh-expire-days: ${HOTEL_JWT_REFRESH_DAYS:14}
+  upload:
+    path: ${HOTEL_UPLOAD_PATH:./uploads}
+  cors:
+    allowed-origins: ${HOTEL_CORS_ORIGINS:http://127.0.0.1:5173,http://127.0.0.1:4173}

@@ -1,0 +1,23 @@
+spring:
+  main:
+    # 生产环境保持启动即完成依赖校验，避免错误推迟到首个请求。
+    lazy-initialization: false
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+mybatis-plus:
+  lazy-initialization: false
+hotel:
+  redis:
+    required: true
+logging:
+  level:
+    root: info
+    com.school.hotel: info
